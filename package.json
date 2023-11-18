@@ -1,0 +1,27 @@
+{
+  "name": "@dragon-fish/md-block",
+  "version": "0.1.0",
+  "type": "module",
+  "license": "MIT",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.mjs",
+  "browser": "dist/index.mjs",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "prepublish": "npm run build"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2",
+    "vite": "^5.0.0"
+  },
+  "dependencies": {
+    "rehype-sanitize": "^6.0.0",
+    "rehype-stringify": "^10.0.0",
+    "remark-gfm": "^4.0.0",
+    "remark-parse": "^11.0.0",
+    "remark-rehype": "^11.0.0",
+    "unified": "^11.0.4"
+  }
+}
