@@ -1,8 +1,10 @@
 import { defineConfig } from 'vite'
+import dts from 'vite-plugin-dts'
 
 const PROD = process.env.NODE_ENV === 'production'
 
 export default defineConfig({
+  plugins: [dts()],
   build: {
     outDir: 'dist',
     lib: {
