@@ -8,7 +8,7 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     lib: {
-      name: 'MarkdownTag',
+      name: 'MarkdownTagModule',
       entry: 'src/index.ts',
       fileName: (format) =>
         format === 'es' ? `index.mjs` : `index.${format}.js`,

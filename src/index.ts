@@ -5,7 +5,7 @@ import remarkRehype from 'remark-rehype'
 import rehypeStringify from 'rehype-stringify'
 import rehypeSanitize from 'rehype-sanitize'
 
-export default class MarkdownElement extends HTMLElement {
+export class MarkdownElement extends HTMLElement {
   private remark = MarkdownElement.createRemark()
   static readonly INITIAL_TAG_NNAME = 'markdown-content'
   constructor() {
@@ -74,6 +74,6 @@ if (typeof window !== 'undefined') {
   MarkdownElement.install()
 }
 
-export { MarkdownElement }
+export default MarkdownElement
 export const createMarkdownElement =
   MarkdownElement.createElement.bind(MarkdownElement)

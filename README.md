@@ -29,8 +29,8 @@ pnpm add @dragon-fish/markdown-tag
 import '@dragon-fish/markdown-tag'
 
 // Or sometimes you may need to using the API
-import MarkdownBlock from '@dragon-fish/markdown-tag'
-const md = MarkdownBlock.createElement()
+import { MarkdownElement } from '@dragon-fish/markdown-tag'
+const md = MarkdownElement.createElement()
 md.innerText = `
 # Markdown Render
 
@@ -44,14 +44,14 @@ document.body.appendChild(md)
 ```html
 <!-- Simply load the script -->
 <script src="https://unpkg.com/@dragon-fish/markdown-tag"></script>
-<markdown>
+<markdown-content>
   <!-- some markdown here -->
-</markdown>
+</markdown-content>
 
 <!-- Or sometimes you may need to using the API -->
 <script type="module">
-  import { default as MarkdownBlock } from 'https://unpkg.com/@dragon-fish/markdown-tag?module'
-  const md = MarkdownBlock.createElement()
+  import { MarkdownElement } from 'https://unpkg.com/@dragon-fish/markdown-tag?module'
+  const md = MarkdownElement.createElement()
   md.innerText = `
 # Markdown Render
 
@@ -63,10 +63,14 @@ normal **bold** _italic_ ~~strikethrough~~
 
 ## Tag name alias
 
+You can use `MarkdownElement.install` static method to replace the default `<markdown-content>` tag.
+
 ```ts
-MarkdownBlock.install('markdown-content')
-//                    ↑ replace with your own tag name
+MarkdownElement.install('markdown-content')
+//                      ↑ replace with your own tag name
 ```
+
+P.S. If you are using the umd bundle in browser. Use `window.MarkdownTagModule.MarkdownElement.install('your-tag-name')` instead.
 
 ---
 
