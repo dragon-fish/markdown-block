@@ -12,6 +12,10 @@
     "preview": "vite preview",
     "prepublish": "npm run build"
   },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
   "devDependencies": {
     "typescript": "^5.2.2",
     "vite": "^5.0.0"
