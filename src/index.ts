@@ -70,7 +70,10 @@ export default class MarkdownElement extends HTMLElement {
   }
 }
 
-MarkdownElement.install()
+if (typeof window !== 'undefined') {
+  MarkdownElement.install()
+}
 
+export { MarkdownElement }
 export const createMarkdownElement =
   MarkdownElement.createElement.bind(MarkdownElement)
