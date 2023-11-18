@@ -1,4 +1,4 @@
-# Markdown Block
+# Markdown Tag
 
 Cool stuff that lets you embed markdown in your HTML.
 
@@ -6,59 +6,66 @@ Just like this:
 
 <!-- prettier-ignore-start -->
 ```html
-<markdown>
-# Markdown Block
+<markdown-content>
+# Markdown Render
 
 normal **bold** _italic_ ~~strikethrough~~
-</markdown>
+</markdown-content>
 ```
 <!-- prettier-ignore-end -->
 
 ## Installation
 
 ```sh
-pnpm add @dragon-fish/md-block
+pnpm add @dragon-fish/markdown-tag
 ```
 
 ## Usage
 
-**Using package**
+### As NPM package
 
 ```ts
 // Simply import only, then you can use <markdown> tag in your HTML
-import '@dragon-fish/md-block'
+import '@dragon-fish/markdown-tag'
 
 // Or sometimes you may need to using the API
-import MarkdownBlock from '@dragon-fish/md-block'
+import MarkdownBlock from '@dragon-fish/markdown-tag'
 const md = MarkdownBlock.createElement()
 md.innerText = `
-# Markdown Block
+# Markdown Render
 
 normal **bold** _italic_ ~~strikethrough~~
 `
 document.body.appendChild(md)
 ```
 
-**In browser**
+### In browser
 
 ```html
 <!-- Simply load the script -->
-<script src="https://unpkg.com/@dragon-fish/md-block"></script>
+<script src="https://unpkg.com/@dragon-fish/markdown-tag"></script>
 <markdown>
   <!-- some markdown here -->
 </markdown>
 
 <!-- Or sometimes you may need to using the API -->
 <script type="module">
-  import { default as MarkdownBlock } from 'https://unpkg.com/@dragon-fish/md-block?module'
+  import { default as MarkdownBlock } from 'https://unpkg.com/@dragon-fish/markdown-tag?module'
   const md = MarkdownBlock.createElement()
   md.innerText = `
-# Markdown Block
+# Markdown Render
 
 normal **bold** _italic_ ~~strikethrough~~
 `
   document.body.appendChild(md)
 </script>
+```
+
+## Tag name alias
+
+```ts
+MarkdownBlock.install('markdown-content')
+//                    ↑ replace with your own tag name
 ```
 
 ---

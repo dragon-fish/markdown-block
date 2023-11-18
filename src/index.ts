@@ -7,14 +7,14 @@ import rehypeSanitize from 'rehype-sanitize'
 
 export default class MarkdownElement extends HTMLElement {
   private remark = MarkdownElement.createRemark()
-  static readonly INITIAL_TAG_NNAME = 'markdown'
+  static readonly INITIAL_TAG_NNAME = 'markdown-content'
   constructor() {
     super()
   }
 
-  static install() {
-    const t = MarkdownElement.INITIAL_TAG_NNAME
-    customElements.get(t) || customElements.define(t, MarkdownElement)
+  static install(tagName = MarkdownElement.INITIAL_TAG_NNAME) {
+    customElements.get(tagName) ||
+      customElements.define(tagName, MarkdownElement)
   }
   static createElement() {
     return document.createElement(

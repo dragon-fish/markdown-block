@@ -10,21 +10,21 @@ import MarkdownElement from '..'
   m.innerText = markdown
 
   app.innerHTML = `
-<markdown-render>
+<markdown-content>
 ${markdown}
-</markdown-render>
+</markdown-content>
 
-<div is="markdown-render">
+<div is="markdown-content">
 hello, **is**
 </div>
 
-<div data-is="markdown-render">
+<div data-is="markdown-content">
 hello, **data-is**
 </div>
 `
   // app.append(m);
 
-  document.querySelectorAll('[data-is="markdown-render"]').forEach((el) => {
+  document.querySelectorAll('[data-is="markdown-content"]').forEach((el) => {
     const attributes = el.attributes
     const m = MarkdownElement.createElement()
     m.innerText = el.innerHTML

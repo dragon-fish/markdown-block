@@ -1,6 +1,6 @@
 {
-  "name": "@dragon-fish/md-block",
-  "version": "0.1.1",
+  "name": "@dragon-fish/markdown-tag",
+  "version": "0.2.0",
   "type": "module",
   "author": "Dragon-Fish <dragon-fish@qq.com>",
   "license": "MIT",
