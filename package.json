@@ -1,11 +1,11 @@
 {
   "name": "@dragon-fish/md-block",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "license": "MIT",
   "main": "dist/index.cjs.js",
   "module": "dist/index.mjs",
-  "browser": "dist/index.mjs",
+  "browser": "dist/index.iife.js",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",

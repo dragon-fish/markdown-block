@@ -43,14 +43,14 @@ document.body.appendChild(md)
 
 ```html
 <!-- Simply load the script -->
-<script src="https://unpkg.com/@dragon-fish/md-block/dist/index.iife.js"></script>
+<script src="https://unpkg.com/@dragon-fish/md-block"></script>
 <markdown>
   <!-- some markdown here -->
 </markdown>
 
 <!-- Or sometimes you may need to using the API -->
 <script type="module">
-  import { default as MarkdownBlock } from 'https://unpkg.com/@dragon-fish/md-block/dist/index.mjs?module'
+  import { default as MarkdownBlock } from 'https://unpkg.com/@dragon-fish/md-block?module'
   const md = MarkdownBlock.createElement()
   md.innerText = `
 # Markdown Block
