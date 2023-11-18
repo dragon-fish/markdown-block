@@ -2,6 +2,7 @@
   "name": "@dragon-fish/md-block",
   "version": "0.1.1",
   "type": "module",
+  "author": "Dragon-Fish <dragon-fish@qq.com>",
   "license": "MIT",
   "main": "dist/index.cjs.js",
   "types": "dist/index.d.ts",
